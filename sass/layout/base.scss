@@ -1,0 +1,36 @@
+.range-holder{
+  width: 400px;
+  height: 80px;
+  margin: 0 auto;
+}
+.range__container{
+  min-width: 100px;
+  width: 100%;
+  height: 100%;
+  .range__scale{
+    width: 100%;
+    height: 40px;
+  }
+  .range__bar{
+    width: 100%;
+    position: relative;
+    height: $range-bar-height;
+    background: $range-bar-background;
+    padding: 0 $range-arrow-width;
+    border-radius: 5px;
+    .range__arrow{
+      background: $range-arrow-background;
+      width: $range-arrow-width;
+      border-radius: 5px;
+      height: 100%;
+      box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5);
+      position: absolute;
+    }
+    .range__left-arrow{
+      left: 0;
+    }
+    .range__right-arrow{
+      right: 0;
+    }
+  }
+}

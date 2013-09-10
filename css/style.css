@@ -1,0 +1,46 @@
+/*  dimension  */
+/* colors  */
+/* line 1, D:/work/SlideRange/sass/layout/base.scss */
+.range-holder {
+  width: 400px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* line 6, D:/work/SlideRange/sass/layout/base.scss */
+.range__container {
+  min-width: 100px;
+  width: 100%;
+  height: 100%;
+}
+/* line 10, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__scale {
+  width: 100%;
+  height: 40px;
+}
+/* line 14, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar {
+  width: 100%;
+  position: relative;
+  height: 30px;
+  background: #dddddd;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+/* line 21, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__arrow {
+  background: whitesmoke;
+  width: 15px;
+  border-radius: 5px;
+  height: 100%;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+/* line 29, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__left-arrow {
+  left: 0;
+}
+/* line 32, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__right-arrow {
+  right: 0;
+}
