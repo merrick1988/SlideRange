@@ -7,13 +7,16 @@
     <!-- Custom styles-->
     <link href="css/style.css" rel="stylesheet" media="screen">
 </head>
-<body>
+<body ng-controller="mainController">
 <div class="range-holder">
-    <div ng-range></div>
+    <div ng-range scales="scales"></div>
 </div>
 
 <!--   angular 1.0.8  -->
-<script src="js/angular/angular.js"></script>
+<script src="js/lib/angular/angular.js"></script>
+
+<!-- Underscore.js 1.5.0 -->
+<script src="js/lib/underscore/underscore.js"></script>
 
 <script src="js/app.js"></script>
 <!-- directives -->

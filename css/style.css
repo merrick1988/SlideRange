@@ -1,46 +1,116 @@
 /*  dimension  */
 /* colors  */
 /* line 1, D:/work/SlideRange/sass/layout/base.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 4, D:/work/SlideRange/sass/layout/base.scss */
 .range-holder {
-  width: 400px;
-  height: 80px;
+  width: 550px;
   margin: 0 auto;
 }
 
-/* line 6, D:/work/SlideRange/sass/layout/base.scss */
+/* line 8, D:/work/SlideRange/sass/layout/base.scss */
 .range__container {
   min-width: 100px;
   width: 100%;
   height: 100%;
-}
-/* line 10, D:/work/SlideRange/sass/layout/base.scss */
-.range__container .range__scale {
-  width: 100%;
-  height: 40px;
+  text-align: center;
+  padding-top: 40px;
 }
 /* line 14, D:/work/SlideRange/sass/layout/base.scss */
-.range__container .range__bar {
-  width: 100%;
-  position: relative;
-  height: 30px;
-  background: #dddddd;
-  padding: 0 15px;
-  border-radius: 5px;
-}
-/* line 21, D:/work/SlideRange/sass/layout/base.scss */
-.range__container .range__bar .range__arrow {
-  background: whitesmoke;
-  width: 15px;
-  border-radius: 5px;
-  height: 100%;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5);
+.range__container .range__scale-tooltip {
+  text-align: center;
+  top: -40px;
+  padding: 4px 10px;
+  width: 20px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 0px #c2c5d6;
+  -moz-box-shadow: 0px 1px 0px #c2c5d6;
+  box-shadow: 0px 1px 0px #c2c5d6;
+  color: white;
+  font-size: 15px;
   position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #67707f), color-stop(100%, #888da0));
 }
 /* line 29, D:/work/SlideRange/sass/layout/base.scss */
-.range__container .range__bar .range__left-arrow {
-  left: 0;
+.range__container .range__scale-tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  display: block;
+  z-index: 99;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: -10px;
+  border-top: 10px solid #888DA0;
 }
-/* line 32, D:/work/SlideRange/sass/layout/base.scss */
-.range__container .range__bar .range__right-arrow {
-  right: 0;
+/* line 41, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__limit {
+  color: #777;
+  font-size: 28px;
+  display: inline-block;
+  width: 10%;
+  display: inline-block;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* line 50, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar {
+  width: 80%;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  background: #dae0e5;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dae0e5), color-stop(100%, whitesmoke));
+  webkit-box-shadow: inset 0px 0px 10px RGBA(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 10px RGBA(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 10px RGBA(0, 0, 0, 0.1);
+  border-top: solid 1px #dae0e5;
+  border-bottom: solid 1px #dae0e5;
+  text-align: left;
+  cursor: pointer;
+}
+/* line 67, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__scale-separator {
+  height: 100%;
+  display: inline-block;
+  position: relative;
+}
+/* line 72, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__scale-separator:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  border-left: 1px solid #dae0e5;
+  opacity: 1;
+  position: absolute;
+}
+/* line 81, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__scale-separator:first-child:after {
+  border: none;
+}
+/* line 84, D:/work/SlideRange/sass/layout/base.scss */
+.range__container .range__bar .range__handle {
+  background: #385268;
+  position: absolute;
+  top: -20%;
+  left: 124px;
+  margin: 1px 0;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  -webkit-box-shadow: 0px 0px 5px RGBA(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px RGBA(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px RGBA(0, 0, 0, 0.5);
+  bottom: -20%;
+  width: 15px;
 }
