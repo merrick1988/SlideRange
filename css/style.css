@@ -57,8 +57,10 @@ body {
   display: inline-block;
   font-weight: 600;
   cursor: pointer;
+  top: 100%;
+  position: absolute;
 }
-/* line 50, D:/work/SlideRange/sass/layout/base.scss */
+/* line 52, D:/work/SlideRange/sass/layout/base.scss */
 .range__container .range__bar {
   width: 80%;
   box-sizing: border-box;
@@ -75,14 +77,15 @@ body {
   border-bottom: solid 1px #dae0e5;
   text-align: left;
   cursor: pointer;
+  padding: 0 15px;
 }
-/* line 67, D:/work/SlideRange/sass/layout/base.scss */
+/* line 70, D:/work/SlideRange/sass/layout/base.scss */
 .range__container .range__bar .range__scale-separator {
   height: 100%;
   display: inline-block;
   position: relative;
 }
-/* line 72, D:/work/SlideRange/sass/layout/base.scss */
+/* line 75, D:/work/SlideRange/sass/layout/base.scss */
 .range__container .range__bar .range__scale-separator:after {
   content: "";
   height: 100%;
@@ -92,11 +95,11 @@ body {
   opacity: 1;
   position: absolute;
 }
-/* line 81, D:/work/SlideRange/sass/layout/base.scss */
+/* line 84, D:/work/SlideRange/sass/layout/base.scss */
 .range__container .range__bar .range__scale-separator:first-child:after {
   border: none;
 }
-/* line 84, D:/work/SlideRange/sass/layout/base.scss */
+/* line 87, D:/work/SlideRange/sass/layout/base.scss */
 .range__container .range__bar .range__handle {
   background: #385268;
   position: absolute;

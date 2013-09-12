@@ -11,25 +11,24 @@
 					scope: {scales: '='},
 					template:
 						'<div class="range__container">' +
-							'<div class="range__limit">{{scales[0]}}</div>'+
 							'<div class="range__bar">'+
+								'<div class="range__limit">{{scales[0]}}</div>'+
 								'<div ng-repeat="scale in innerScales" class="range__scale-separator" ng-style="{width: scaleWidth}" ng-click="setHandlePosition($event, $index)"></div>'+
-								'<div class="range__scale-separator" ng-style="{width: scaleWidth}" ng-click="setHandlePosition($event, innerScales.length)"></div>'+
+//								'<div class="range__scale-separator" ng-style="{width: scaleWidth}" ng-click="setHandlePosition($event, innerScales.length)"></div>'+
+								'<div class="range__limit">{{scales[scales.length-1]}}</div>'+
 								'<div class="range__handle" ng-style="{left: handlePosition}"></div>'+
 								'<div class="range__scale-tooltip" ng-style="{left: tooltipPosition}">{{currentStep}}</div>'+
 							'</div>'+
-							'<div class="range__limit">{{scales[scales.length-1]}}</div>'+
 						'</div>',
 					link: function (scope, element, attrs) {
-						var init, updateHandlePosition;
-						var scales = _.toArray(scope.scales),
-							handleWidth = element[0].children[1].children[1].offsetWidth,
-							tooltipWidth = element[0].children[1].children[2].offsetWidth,
-							range = angular.element(element[0].children[1])[0],
-							rangeWidth =  element[0].children[1].offsetWidth;
+						var init, updateHandlePosition,
+							handleWidth = element[0].children[0].children[2].offsetWidth,
+							tooltipWidth = element[0].children[0].children[3].offsetWidth,
+							range = angular.element(element[0].children[0])[0],
+							rangeWidth =  element[0].children[0].innerWidth;
 						scope.currentStep = 5;
-						scope.innerScales = scales.slice(0, scales.length-1).slice(1);
-						scope.scaleWidth = Math.floor(rangeWidth / (scope.innerScales.length + 1)) + 'px';
+						scope.innerScales = _.toArray(scope.scales)
+						scope.scaleWidth = Math.floor(rangeWidth / (scope.innerScales.length)) + 'px';
 
 
 						updateHandlePosition = function(step){
@@ -50,7 +49,6 @@
 								updateHandlePosition(scope.currentStep);
 								return;
 							}
-							console.log(index)
 							if(index === scope.innerScales.length){
 								scope.currentStep = scope.innerScales.length;
 								updateHandlePosition(scope.currentStep);

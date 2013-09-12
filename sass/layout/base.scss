@@ -46,6 +46,8 @@ body{
     display: inline-block;
     font-weight: 600;
     cursor: pointer;
+    top: 100%;
+    position: absolute;
   }
   .range__bar{
     width: 80%;
@@ -63,6 +65,7 @@ body{
     border-bottom: solid 1px #dae0e5;
     text-align: left;
     cursor: pointer;
+    padding: 0 15px;
 
     .range__scale-separator{
       height: 100%;
